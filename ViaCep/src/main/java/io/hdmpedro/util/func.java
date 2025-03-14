@@ -11,8 +11,8 @@ import java.util.concurrent.TimeUnit;
 public class func {
 
    public static void menuPrincipal() throws SQLException, IOException, InterruptedException {
-    Scanner sc = new Scanner(System.in); // Movido para fora do loop
-    CEPDao dao = new CEPDao(DatabaseConnection.getConnection()); // Movido para fora do loop
+    Scanner sc = new Scanner(System.in); 
+    CEPDao dao = new CEPDao(DatabaseConnection.getConnection());
     
     while(true) {
         CEPApiClient api = new CEPApiClient();
@@ -21,15 +21,15 @@ public class func {
         System.out.println("\nDeseja consultar pelo número do CEP ou Endereço?");
         System.out.println("CEP[1]");
         System.out.println("Endereço[2]");
-        System.out.println("Sair[3]"); // Adicionada opção de saída
+        System.out.println("Sair[3]")
 
         int input;
         try {
             input = sc.nextInt();
-            sc.nextLine(); // Limpa o buffer do teclado
+            sc.nextLine();
         } catch (InputMismatchException e) {
             System.out.println("Entrada inválida! Digite 1 ou 2.");
-            sc.nextLine(); // Limpa entrada inválida
+            sc.nextLine();
             continue;
         }
 
@@ -73,7 +73,7 @@ public class func {
 
         } else if(input == 3) {
             System.out.println("Saindo do sistema...");
-            break; // Sai do loop
+            break;
         } else {
             System.out.println("Opção inválida! Tente novamente.");
         }
