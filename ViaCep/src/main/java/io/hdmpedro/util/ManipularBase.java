@@ -23,7 +23,10 @@ public class ManipularBase {
 
     }
 
+    public static void main(String[] args) {
+        abrirBase();
 
+    }
 
 
 
