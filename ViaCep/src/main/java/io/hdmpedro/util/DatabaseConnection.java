@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public class DatabaseConnection {
 
 
-    private static final String URL = "jdbc:mariadb://localhost:3306/ceps";
+    private static final String URL = "jdbc:mariadb://localhost:3306/viacepbuscas";
     private static final String USER = "root";
     private static final String PASSWORD = "";
 

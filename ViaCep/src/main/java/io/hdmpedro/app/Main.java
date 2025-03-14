@@ -1,26 +1,20 @@
 package io.hdmpedro.app;
 import io.hdmpedro.model.CepModel;
+import io.hdmpedro.repository.CEPDao;
 import io.hdmpedro.util.*;
 import io.hdmpedro.model.ApiData;
 
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, SQLException, InterruptedException {
 
-        String cep = "35560000";
-        String API_URL = ApiData.API_URL.formatarUrl(cep);
-        String user = "";
-        String password = "";
+        Scanner sc = new Scanner(System.in);
 
-        CEPApiClient api = new CEPApiClient();
-        CepModel ab = new CepModel();
-
-        CepModel model = api.consultarCEP(API_URL, cep, user, password);
-
-        System.out.println(model);
-
+        func.menuPrincipal();
 
     }
 
