@@ -1,0 +1,1 @@
+java -jar target\ViaCep-1.0-SNAPSHOT.jar
